@@ -13,7 +13,42 @@
 		500F4AB325B4D1210042108A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F4A9E25B4D11D0042108A /* ContentView.swift */; };
 		500F4AB425B4D1210042108A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 500F4A9F25B4D1210042108A /* Assets.xcassets */; };
 		500F4AB525B4D1210042108A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 500F4A9F25B4D1210042108A /* Assets.xcassets */; };
+		500F4AC825B4D3A20042108A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500F4AC725B4D3A20042108A /* WidgetKit.framework */; };
+		500F4ACA25B4D3A20042108A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500F4AC925B4D3A20042108A /* SwiftUI.framework */; };
+		500F4ACD25B4D3A20042108A /* FastTimerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F4ACC25B4D3A20042108A /* FastTimerWidget.swift */; };
+		500F4ACF25B4D3A60042108A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 500F4ACE25B4D3A60042108A /* Assets.xcassets */; };
+		500F4AD325B4D3A60042108A /* FastTimerWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 500F4AC525B4D3A20042108A /* FastTimerWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		500F4ADC25B4D3D50042108A /* CircularTimerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F4ADB25B4D3D50042108A /* CircularTimerAnimation.swift */; };
+		500F4ADD25B4D3D50042108A /* CircularTimerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F4ADB25B4D3D50042108A /* CircularTimerAnimation.swift */; };
+		500F4ADE25B4D3D50042108A /* CircularTimerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F4ADB25B4D3D50042108A /* CircularTimerAnimation.swift */; };
+		500F4AE325B4D92B0042108A /* TimerCountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F4AE225B4D92B0042108A /* TimerCountDown.swift */; };
+		500F4AE425B4D92B0042108A /* TimerCountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F4AE225B4D92B0042108A /* TimerCountDown.swift */; };
+		500F4AE525B4D92B0042108A /* TimerCountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F4AE225B4D92B0042108A /* TimerCountDown.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		500F4AD125B4D3A60042108A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 500F4A9825B4D11C0042108A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 500F4AC425B4D3A10042108A;
+			remoteInfo = FastTimerWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		500F4AD725B4D3A60042108A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				500F4AD325B4D3A60042108A /* FastTimerWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		500F4A9D25B4D11D0042108A /* GoFastApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoFastApp.swift; sourceTree = "<group>"; };
@@ -24,6 +59,14 @@
 		500F4AAC25B4D1210042108A /* GoFast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoFast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		500F4AAE25B4D1210042108A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		500F4AAF25B4D1210042108A /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		500F4AC525B4D3A20042108A /* FastTimerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FastTimerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		500F4AC725B4D3A20042108A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		500F4AC925B4D3A20042108A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		500F4ACC25B4D3A20042108A /* FastTimerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastTimerWidget.swift; sourceTree = "<group>"; };
+		500F4ACE25B4D3A60042108A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		500F4AD025B4D3A60042108A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		500F4ADB25B4D3D50042108A /* CircularTimerAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTimerAnimation.swift; sourceTree = "<group>"; };
+		500F4AE225B4D92B0042108A /* TimerCountDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCountDown.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +84,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		500F4AC225B4D3A10042108A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				500F4ACA25B4D3A20042108A /* SwiftUI.framework in Frameworks */,
+				500F4AC825B4D3A20042108A /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -50,6 +102,8 @@
 				500F4A9C25B4D11D0042108A /* Shared */,
 				500F4AA625B4D1210042108A /* iOS */,
 				500F4AAD25B4D1210042108A /* macOS */,
+				500F4ACB25B4D3A20042108A /* FastTimerWidget */,
+				500F4AC625B4D3A20042108A /* Frameworks */,
 				500F4AA525B4D1210042108A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +113,8 @@
 			children = (
 				500F4A9D25B4D11D0042108A /* GoFastApp.swift */,
 				500F4A9E25B4D11D0042108A /* ContentView.swift */,
+				500F4ADB25B4D3D50042108A /* CircularTimerAnimation.swift */,
+				500F4AE225B4D92B0042108A /* TimerCountDown.swift */,
 				500F4A9F25B4D1210042108A /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -69,6 +125,7 @@
 			children = (
 				500F4AA425B4D1210042108A /* GoFast.app */,
 				500F4AAC25B4D1210042108A /* GoFast.app */,
+				500F4AC525B4D3A20042108A /* FastTimerWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,6 +147,25 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		500F4AC625B4D3A20042108A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				500F4AC725B4D3A20042108A /* WidgetKit.framework */,
+				500F4AC925B4D3A20042108A /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		500F4ACB25B4D3A20042108A /* FastTimerWidget */ = {
+			isa = PBXGroup;
+			children = (
+				500F4ACC25B4D3A20042108A /* FastTimerWidget.swift */,
+				500F4ACE25B4D3A60042108A /* Assets.xcassets */,
+				500F4AD025B4D3A60042108A /* Info.plist */,
+			);
+			path = FastTimerWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,10 +176,12 @@
 				500F4AA025B4D1210042108A /* Sources */,
 				500F4AA125B4D1210042108A /* Frameworks */,
 				500F4AA225B4D1210042108A /* Resources */,
+				500F4AD725B4D3A60042108A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				500F4AD225B4D3A60042108A /* PBXTargetDependency */,
 			);
 			name = "GoFast (iOS)";
 			productName = "GoFast (iOS)";
@@ -127,6 +205,23 @@
 			productReference = 500F4AAC25B4D1210042108A /* GoFast.app */;
 			productType = "com.apple.product-type.application";
 		};
+		500F4AC425B4D3A10042108A /* FastTimerWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 500F4AD425B4D3A60042108A /* Build configuration list for PBXNativeTarget "FastTimerWidgetExtension" */;
+			buildPhases = (
+				500F4AC125B4D3A10042108A /* Sources */,
+				500F4AC225B4D3A10042108A /* Frameworks */,
+				500F4AC325B4D3A10042108A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FastTimerWidgetExtension;
+			productName = FastTimerWidgetExtension;
+			productReference = 500F4AC525B4D3A20042108A /* FastTimerWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -140,6 +235,9 @@
 						CreatedOnToolsVersion = 12.2;
 					};
 					500F4AAB25B4D1210042108A = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					500F4AC425B4D3A10042108A = {
 						CreatedOnToolsVersion = 12.2;
 					};
 				};
@@ -159,6 +257,7 @@
 			targets = (
 				500F4AA325B4D1210042108A /* GoFast (iOS) */,
 				500F4AAB25B4D1210042108A /* GoFast (macOS) */,
+				500F4AC425B4D3A10042108A /* FastTimerWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -180,6 +279,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		500F4AC325B4D3A10042108A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				500F4ACF25B4D3A60042108A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -187,6 +294,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500F4ADC25B4D3D50042108A /* CircularTimerAnimation.swift in Sources */,
+				500F4AE325B4D92B0042108A /* TimerCountDown.swift in Sources */,
 				500F4AB225B4D1210042108A /* ContentView.swift in Sources */,
 				500F4AB025B4D1210042108A /* GoFastApp.swift in Sources */,
 			);
@@ -196,12 +305,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500F4ADD25B4D3D50042108A /* CircularTimerAnimation.swift in Sources */,
+				500F4AE425B4D92B0042108A /* TimerCountDown.swift in Sources */,
 				500F4AB325B4D1210042108A /* ContentView.swift in Sources */,
 				500F4AB125B4D1210042108A /* GoFastApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		500F4AC125B4D3A10042108A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				500F4ACD25B4D3A20042108A /* FastTimerWidget.swift in Sources */,
+				500F4AE525B4D92B0042108A /* TimerCountDown.swift in Sources */,
+				500F4ADE25B4D3D50042108A /* CircularTimerAnimation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		500F4AD225B4D3A60042108A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 500F4AC425B4D3A10042108A /* FastTimerWidgetExtension */;
+			targetProxy = 500F4AD125B4D3A60042108A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		500F4AB625B4D1210042108A /* Debug */ = {
@@ -318,6 +447,7 @@
 		500F4AB925B4D1210042108A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -340,6 +470,7 @@
 		500F4ABA25B4D1210042108A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -408,6 +539,53 @@
 			};
 			name = Release;
 		};
+		500F4AD525B4D3A60042108A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TK5Y26D53T;
+				INFOPLIST_FILE = FastTimerWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = EvertonCarneiro.GoFast.FastTimerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		500F4AD625B4D3A60042108A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TK5Y26D53T;
+				INFOPLIST_FILE = FastTimerWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = EvertonCarneiro.GoFast.FastTimerWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -434,6 +612,15 @@
 			buildConfigurations = (
 				500F4ABC25B4D1210042108A /* Debug */,
 				500F4ABD25B4D1210042108A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		500F4AD425B4D3A60042108A /* Build configuration list for PBXNativeTarget "FastTimerWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				500F4AD525B4D3A60042108A /* Debug */,
+				500F4AD625B4D3A60042108A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
