@@ -24,6 +24,10 @@
 		500F4AE325B4D92B0042108A /* TimerCountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F4AE225B4D92B0042108A /* TimerCountDown.swift */; };
 		500F4AE425B4D92B0042108A /* TimerCountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F4AE225B4D92B0042108A /* TimerCountDown.swift */; };
 		500F4AE525B4D92B0042108A /* TimerCountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F4AE225B4D92B0042108A /* TimerCountDown.swift */; };
+		500F4AED25B8A3630042108A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F4A9E25B4D11D0042108A /* ContentView.swift */; };
+		500F4AF225B8A51D0042108A /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F4AF125B8A51D0042108A /* StartButton.swift */; };
+		500F4AF325B8A51D0042108A /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F4AF125B8A51D0042108A /* StartButton.swift */; };
+		500F4AF425B8A51D0042108A /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F4AF125B8A51D0042108A /* StartButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,7 @@
 		500F4AD025B4D3A60042108A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		500F4ADB25B4D3D50042108A /* CircularTimerAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTimerAnimation.swift; sourceTree = "<group>"; };
 		500F4AE225B4D92B0042108A /* TimerCountDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCountDown.swift; sourceTree = "<group>"; };
+		500F4AF125B8A51D0042108A /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,10 +116,9 @@
 		500F4A9C25B4D11D0042108A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				500F4AE925B8A3250042108A /* Views */,
 				500F4A9D25B4D11D0042108A /* GoFastApp.swift */,
 				500F4A9E25B4D11D0042108A /* ContentView.swift */,
-				500F4ADB25B4D3D50042108A /* CircularTimerAnimation.swift */,
-				500F4AE225B4D92B0042108A /* TimerCountDown.swift */,
 				500F4A9F25B4D1210042108A /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -164,6 +168,16 @@
 				500F4AD025B4D3A60042108A /* Info.plist */,
 			);
 			path = FastTimerWidget;
+			sourceTree = "<group>";
+		};
+		500F4AE925B8A3250042108A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				500F4ADB25B4D3D50042108A /* CircularTimerAnimation.swift */,
+				500F4AE225B4D92B0042108A /* TimerCountDown.swift */,
+				500F4AF125B8A51D0042108A /* StartButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +310,7 @@
 			files = (
 				500F4ADC25B4D3D50042108A /* CircularTimerAnimation.swift in Sources */,
 				500F4AE325B4D92B0042108A /* TimerCountDown.swift in Sources */,
+				500F4AF225B8A51D0042108A /* StartButton.swift in Sources */,
 				500F4AB225B4D1210042108A /* ContentView.swift in Sources */,
 				500F4AB025B4D1210042108A /* GoFastApp.swift in Sources */,
 			);
@@ -307,6 +322,7 @@
 			files = (
 				500F4ADD25B4D3D50042108A /* CircularTimerAnimation.swift in Sources */,
 				500F4AE425B4D92B0042108A /* TimerCountDown.swift in Sources */,
+				500F4AF325B8A51D0042108A /* StartButton.swift in Sources */,
 				500F4AB325B4D1210042108A /* ContentView.swift in Sources */,
 				500F4AB125B4D1210042108A /* GoFastApp.swift in Sources */,
 			);
@@ -318,6 +334,8 @@
 			files = (
 				500F4ACD25B4D3A20042108A /* FastTimerWidget.swift in Sources */,
 				500F4AE525B4D92B0042108A /* TimerCountDown.swift in Sources */,
+				500F4AF425B8A51D0042108A /* StartButton.swift in Sources */,
+				500F4AED25B8A3630042108A /* ContentView.swift in Sources */,
 				500F4ADE25B4D3D50042108A /* CircularTimerAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,6 +13,7 @@ struct TimerCountDown: View {
     @State var minutes = 0
     @State var hours = 1
     @State var isTimerActivated = false
+    @State var isTimerPaused = false
     @State var timer: Timer? = nil
     
     init() {
@@ -32,9 +33,10 @@ struct TimerCountDown: View {
                 
             }
             Button(action: {
-                stopTimer()
+                pauseTimer()
+
             }){
-                Text("stop")
+                Text("pause")
                 
             }
             
@@ -44,10 +46,10 @@ struct TimerCountDown: View {
     
     func startTimer() {
         if !isTimerActivated {
-            seconds = 3
-            minutes = 2
+            seconds = 59
+            minutes = 59
             hours -= 1
-            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ time in
+            timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true){ time in
                 countDown()
 
             }
@@ -57,10 +59,15 @@ struct TimerCountDown: View {
     }
     
     func stopTimer(){
+        
         timer?.invalidate()
         timer = nil
         isTimerActivated.toggle()
 
+    }
+    
+    func pauseTimer() {
+        isTimerPaused.toggle()
     }
     
     func clockString() -> String {
@@ -72,19 +79,21 @@ struct TimerCountDown: View {
     }
     
     func countDown() {
-        if seconds > 0 {
-            seconds -= 1
-        }
-        if seconds == 0 && minutes > 0 {
-            seconds = 3
-            minutes -= 1
-        }
-        if minutes == 0 && hours > 0 {
-            if hours == 0 && minutes == 0 && seconds == 0 {
-                stopTimer()
-            } else {
-                minutes = 3
-                hours -= 1
+        if !isTimerPaused {
+            if seconds > 0 {
+                seconds -= 1
+            }
+            if seconds == 0 && minutes > 0 {
+                seconds = 59
+                minutes -= 1
+            }
+            if minutes == 0 && hours > 0 {
+                if hours == 0 && minutes == 0 && seconds == 0 {
+                    stopTimer()
+                    isTimerActivated.toggle()
+                } else {
+                    hours -= 1
+                }
             }
         }
 
