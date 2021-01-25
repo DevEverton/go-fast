@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct StartButton: View {
+    
+    @Binding var isButtonPressed: Bool
+    
     var body: some View {
-        Button(action: {}) {
+        Button(action: { isButtonPressed.toggle() }) {
             Image(systemName: "playpause.fill")
                 .font(.system(size: 30, weight: .regular))
                 .foregroundColor(Color(.systemIndigo))
@@ -28,7 +31,7 @@ struct StartButton: View {
 
 struct StartButton_Previews: PreviewProvider {
     static var previews: some View {
-        StartButton()
+        StartButton(isButtonPressed: .constant(false))
             .preferredColorScheme(.light)
     }
 }

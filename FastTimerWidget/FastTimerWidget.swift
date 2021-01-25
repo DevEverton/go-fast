@@ -42,7 +42,8 @@ struct FastTimerWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        TimerCountDown()
+//        TimerCountDown()
+        Text("test")
     }
 }
 
