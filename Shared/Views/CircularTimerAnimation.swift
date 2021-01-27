@@ -32,20 +32,11 @@ struct CircularTimerAnimation: View {
                     .rotation3DEffect(Angle(degrees: 180),axis: (x: 1, y: 0, z: 0))
                     .frame(width: width, height: height)
                     .shadow(color: Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)).opacity(0.1), radius: 3, x: 0, y: 3)
-                    .animation(.easeInOut(duration: 1.5))
+                    .animation(.easeInOut(duration: 1.7))
                 
-//                Text("\(Int(sliderValue))%")
-//                    .font(.system(size: 40))
-//                    .fontWeight(.bold)
                     
             }
-//            Text("\(sliderValue)")
-//            Text("\(progress)")
-//
-//            Slider(value: $sliderValue, in: 0...16, step: 1.0)
-//                .padding(.top, 50)
-//                .frame(width: 300)
-//                .accentColor(Color(color1))
+
         }
     }
 }

@@ -18,7 +18,7 @@ struct StartButton: View {
                 .foregroundColor(Color(.systemIndigo))
                 .padding(.all, 20)
                 .background(Color.white)
-                .shadow(color: Color.black.opacity(0.3), radius: 10, x: 5, y: 10)
+                .shadow(color: Color.black.opacity(0.5), radius: 10, x: 5, y: 10)
                 .clipShape(Circle())
                 
         }

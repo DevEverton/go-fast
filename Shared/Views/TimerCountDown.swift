@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct TimerCountDown: View {
-    @State var timeRemaining = 100
     @State var seconds = 0
-    @State var minutes = 0
-    @State var hours = 16
+    @State var minutes = 1
+    @State var hours = 0
     @State var isTimerActivated = false
     @State var isTimerPaused = false
     @State var timer: Timer? = nil
@@ -38,26 +37,22 @@ struct TimerCountDown: View {
                     .background(Color.white)
                     .shadow(color: Color.black.opacity(0.3), radius: 10, x: 5, y: 10)
                     .clipShape(Circle())
-                    
             }
-
-            
         }
 
     }
-    
     func startTimer() {
-        animationSeconds = CGFloat(hours) * 3600.0
+        animationSeconds = (CGFloat(minutes) * 60.0) - 1
         if !isTimerActivated {
             seconds = 59
-            minutes = 59
-            hours -= 1
-            timer = Timer.scheduledTimer(withTimeInterval: 0.00001, repeats: true){ time in
+            minutes -= 1
+//            minutes = 59
+//            hours -= 1
+            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ time in
                 countDown()
 
             }
             isTimerActivated.toggle()
-            print(hours)
         }
 
     }
