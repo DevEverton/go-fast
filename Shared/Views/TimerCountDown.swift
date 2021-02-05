@@ -9,16 +9,29 @@ import SwiftUI
 
 struct TimerCountDown: View {
     @State var seconds = 0
-    @State var minutes = 1
-    @State var hours = 0
+    @State var minutes = 0
+    @State var hours = 16
     @State var isTimerActivated = false
     @State var isTimerPaused = false
     @State var timer: Timer? = nil
     @Binding var animationSeconds: CGFloat
-    
+    @State var buttonIsDisable = false
+    @State var buttonColor = Color(.systemIndigo)
+
     
     var body: some View {
         VStack {
+            Button(action: {
+                resetTimer()
+            }){
+                Text("reset")
+                    .font(.system(size: 25, weight: .regular))
+                    .foregroundColor(Color.red)
+            }
+            .padding(.leading, 320)
+
+            
+            Spacer()
             Text(clockString())
                 .font(.custom("Avenir Next", size: 40))
                 .fontWeight(.black)
@@ -32,23 +45,36 @@ struct TimerCountDown: View {
             }) {
                 Image(systemName: "playpause.fill")
                     .font(.system(size: 30, weight: .regular))
-                    .foregroundColor(Color(.systemIndigo))
+                    .foregroundColor(buttonColor)
                     .padding(.all, 20)
                     .background(Color.white)
                     .shadow(color: Color.black.opacity(0.3), radius: 10, x: 5, y: 10)
                     .clipShape(Circle())
             }
+            .disabled(buttonIsDisable)
+            Spacer()
         }
 
     }
+    
+    func disableButton() {
+        buttonIsDisable = true
+        buttonColor = Color.gray
+
+    }
+    
+    func enableButton() {
+        buttonIsDisable = false
+        buttonColor = Color(.systemIndigo)
+    }
+    
     func startTimer() {
-        animationSeconds = (CGFloat(minutes) * 60.0) - 1
+        animationSeconds = 0
         if !isTimerActivated {
             seconds = 59
-            minutes -= 1
-//            minutes = 59
-//            hours -= 1
-            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ time in
+            minutes = 59
+            hours -= 1
+            timer = Timer.scheduledTimer(withTimeInterval: 0.00001, repeats: true){ time in
                 countDown()
 
             }
@@ -59,9 +85,10 @@ struct TimerCountDown: View {
     
     func stopTimer(){
         
-        timer?.invalidate()
+        timer!.invalidate()
         timer = nil
         isTimerActivated.toggle()
+        animationSeconds = 0
 
     }
     
@@ -79,9 +106,14 @@ struct TimerCountDown: View {
     
     func countDown() {
         if !isTimerPaused {
+            if isTimerActivated {
+                animationSeconds += 1
+                print("Animation Seconds: \(animationSeconds)")
+            }
+            
             if seconds > 0 {
                 seconds -= 1
-                animationSeconds -= 1
+
             }
             if seconds == 0 && minutes > 0 {
                 seconds = 59
@@ -99,6 +131,12 @@ struct TimerCountDown: View {
             
         }
 
+    }
+    
+    func resetTimer() {
+        hours = 16
+        minutes = 0
+        seconds = 0
     }
     
 
