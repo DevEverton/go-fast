@@ -11,7 +11,7 @@ import SwiftUI
 struct GoFastApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(animationSeconds: 3600.0)
+            ContentView()
         }
     }
 }

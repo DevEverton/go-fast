@@ -28,6 +28,10 @@
 		500F4AF225B8A51D0042108A /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F4AF125B8A51D0042108A /* StartButton.swift */; };
 		500F4AF325B8A51D0042108A /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F4AF125B8A51D0042108A /* StartButton.swift */; };
 		500F4AF425B8A51D0042108A /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F4AF125B8A51D0042108A /* StartButton.swift */; };
+		500F4AFE25D17A8E0042108A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 500F4A9F25B4D1210042108A /* Assets.xcassets */; };
+		500F4B0325D182FA0042108A /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F4B0225D182F90042108A /* TimerView.swift */; };
+		500F4B0425D182FA0042108A /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F4B0225D182F90042108A /* TimerView.swift */; };
+		500F4B0525D182FA0042108A /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500F4B0225D182F90042108A /* TimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,7 @@
 		500F4ADB25B4D3D50042108A /* CircularTimerAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTimerAnimation.swift; sourceTree = "<group>"; };
 		500F4AE225B4D92B0042108A /* TimerCountDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCountDown.swift; sourceTree = "<group>"; };
 		500F4AF125B8A51D0042108A /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
+		500F4B0225D182F90042108A /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +181,7 @@
 				500F4ADB25B4D3D50042108A /* CircularTimerAnimation.swift */,
 				500F4AE225B4D92B0042108A /* TimerCountDown.swift */,
 				500F4AF125B8A51D0042108A /* StartButton.swift */,
+				500F4B0225D182F90042108A /* TimerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -297,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500F4AFE25D17A8E0042108A /* Assets.xcassets in Resources */,
 				500F4ACF25B4D3A60042108A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500F4B0325D182FA0042108A /* TimerView.swift in Sources */,
 				500F4ADC25B4D3D50042108A /* CircularTimerAnimation.swift in Sources */,
 				500F4AE325B4D92B0042108A /* TimerCountDown.swift in Sources */,
 				500F4AF225B8A51D0042108A /* StartButton.swift in Sources */,
@@ -320,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500F4B0425D182FA0042108A /* TimerView.swift in Sources */,
 				500F4ADD25B4D3D50042108A /* CircularTimerAnimation.swift in Sources */,
 				500F4AE425B4D92B0042108A /* TimerCountDown.swift in Sources */,
 				500F4AF325B8A51D0042108A /* StartButton.swift in Sources */,
@@ -332,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500F4B0525D182FA0042108A /* TimerView.swift in Sources */,
 				500F4ACD25B4D3A20042108A /* FastTimerWidget.swift in Sources */,
 				500F4AE525B4D92B0042108A /* TimerCountDown.swift in Sources */,
 				500F4AF425B8A51D0042108A /* StartButton.swift in Sources */,

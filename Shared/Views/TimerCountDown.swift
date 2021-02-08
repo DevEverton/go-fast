@@ -24,9 +24,14 @@ struct TimerCountDown: View {
             Button(action: {
                 resetTimer()
             }){
-                Text("reset")
-                    .font(.system(size: 25, weight: .regular))
-                    .foregroundColor(Color.red)
+                Image(systemName: "stop.circle")
+                    .font(.system(size: 30, weight: .regular))
+                    .padding(8)
+                    .foregroundColor(Color("red"))
+                    .background(Color("button"))
+                    .shadow(color: Color.black.opacity(0.3), radius: 10, x: 5, y: 10)
+                    .clipShape(Circle())
+
             }
             .padding(.leading, 320)
 
@@ -35,6 +40,7 @@ struct TimerCountDown: View {
             Text(clockString())
                 .font(.custom("Avenir Next", size: 40))
                 .fontWeight(.black)
+                .padding(.vertical, 10)
 
             Button(action: {
                 if !isTimerActivated {
@@ -47,12 +53,13 @@ struct TimerCountDown: View {
                     .font(.system(size: 30, weight: .regular))
                     .foregroundColor(buttonColor)
                     .padding(.all, 20)
-                    .background(Color.white)
+                    .background(Color("button"))
                     .shadow(color: Color.black.opacity(0.3), radius: 10, x: 5, y: 10)
                     .clipShape(Circle())
             }
             .disabled(buttonIsDisable)
             Spacer()
+
         }
 
     }
@@ -137,6 +144,7 @@ struct TimerCountDown: View {
         hours = 16
         minutes = 0
         seconds = 0
+        animationSeconds = 0
     }
     
 
