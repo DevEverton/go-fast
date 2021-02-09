@@ -15,7 +15,7 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "calendar")
                     Text("Progresso")
-                } 
+                }
             TimerView()
                 .tabItem {
                 Image(systemName: "timer")

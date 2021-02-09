@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+
 struct TimerCountDown: View {
     @State var seconds = 0
     @State var minutes = 0
@@ -16,18 +18,22 @@ struct TimerCountDown: View {
     @State var timer: Timer? = nil
     @Binding var animationSeconds: CGFloat
     @State var buttonIsDisable = false
-    @State var buttonColor = Color(.systemIndigo)
-
+    @State var buttonBackground = Color("button")
+    @State var buttonForeground = Color(#colorLiteral(red: 0.3058823529, green: 0.2392156863, blue: 0.3254901961, alpha: 1))
+    
     
     var body: some View {
         VStack {
             Button(action: {
+                stopTimer()
+                enableButton()
                 resetTimer()
+
             }){
                 Image(systemName: "stop.circle")
                     .font(.system(size: 30, weight: .regular))
                     .padding(8)
-                    .foregroundColor(Color("red"))
+                    .foregroundColor(Color(#colorLiteral(red: 0.3058823529, green: 0.2392156863, blue: 0.3254901961, alpha: 1)))
                     .background(Color("button"))
                     .shadow(color: Color.black.opacity(0.3), radius: 10, x: 5, y: 10)
                     .clipShape(Circle())
@@ -41,38 +47,44 @@ struct TimerCountDown: View {
                 .font(.custom("Avenir Next", size: 40))
                 .fontWeight(.black)
                 .padding(.vertical, 10)
+                .foregroundColor(.white)
+            
 
             Button(action: {
                 if !isTimerActivated {
                     startTimer()
-                } else {
-                    pauseTimer()
+                    disableButton()
                 }
             }) {
-                Image(systemName: "playpause.fill")
+                Image(systemName: "play.fill")
                     .font(.system(size: 30, weight: .regular))
-                    .foregroundColor(buttonColor)
+                    .foregroundColor(buttonForeground)
                     .padding(.all, 20)
-                    .background(Color("button"))
+                    .background(buttonBackground)
                     .shadow(color: Color.black.opacity(0.3), radius: 10, x: 5, y: 10)
                     .clipShape(Circle())
             }
             .disabled(buttonIsDisable)
+            .animation(.easeInOut(duration: 1.0))
             Spacer()
 
         }
 
     }
+
     
     func disableButton() {
         buttonIsDisable = true
-        buttonColor = Color.gray
+        buttonBackground = Color.gray
+        buttonForeground = Color.white
 
     }
     
     func enableButton() {
         buttonIsDisable = false
-        buttonColor = Color(.systemIndigo)
+        buttonBackground = Color("button")
+        buttonForeground = Color(#colorLiteral(red: 0.3058823529, green: 0.2392156863, blue: 0.3254901961, alpha: 1))
+        
     }
     
     func startTimer() {

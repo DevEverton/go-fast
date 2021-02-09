@@ -9,8 +9,8 @@ import SwiftUI
 
 struct CircularTimerAnimation: View {
     
-    var color1 = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
-    var color2 = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+    var color1 = #colorLiteral(red: 0.3058823529, green: 0.2392156863, blue: 0.3254901961, alpha: 1)
+    var color2 = #colorLiteral(red: 0.662745098, green: 0.5450980392, blue: 0.5960784314, alpha: 1)
     var width: CGFloat
     var height: CGFloat
     var progressCircle: CGFloat

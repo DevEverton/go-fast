@@ -17,6 +17,7 @@ struct TimerView: View {
                 .edgesIgnoringSafeArea(.all)
             CircularTimerAnimation(width: 350, height: 350, progressCircle: animationSeconds, fastTime: 57600)
             TimerCountDown(animationSeconds: $animationSeconds)
+            
         }
     }
 }
